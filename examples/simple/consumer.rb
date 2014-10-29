@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require_relative '../lib/glider_messaging'
+require_relative '../../lib/glider_messaging'
 include Glider::Messaging
 
 class MessageProcessor
@@ -13,7 +13,7 @@ end
 
 if __FILE__ == $0
   Utils.cls
-  consumer = Consumer.new 'ex1', MessageProcessor
+  consumer = Consumer.new 'simple', MessageProcessor
   trap('INT') { consumer.cancel; consumer.connection.close; exit }
   sleep
 end

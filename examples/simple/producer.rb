@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
-require_relative '../lib/glider_messaging'
+require_relative '../../lib/glider_messaging'
 include Glider::Messaging
 
 class MessageProducer
@@ -46,6 +46,6 @@ if __FILE__ == $0
   Utils.cls
   qty = ENV.fetch('QTY', ARGV[0] || 10).to_i
   publisher = Publisher.new
-  producer = MessageProducer.new 'ex1', publisher, qty
+  producer = MessageProducer.new 'simple', publisher, qty
   producer.run
 end
