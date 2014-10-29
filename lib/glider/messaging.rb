@@ -1,0 +1,6 @@
+require 'glider/messaging/version'
+require 'glider/messaging/utils'
+require 'glider/messaging/source'
+require 'glider/messaging/message'
+require 'glider/messaging/consumer'
+require 'glider/messaging/publisher'
